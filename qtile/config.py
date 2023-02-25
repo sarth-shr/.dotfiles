@@ -2,8 +2,6 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 
-# from libqtile.utils import guess_terminal
-
 # Startup hook
 import os
 import subprocess
@@ -31,8 +29,7 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
-    # Move windows between left/right columns or move up/down in current stack.
-    # Moving out of range in Columns layout will create new column.
+    # Move windows
     Key(
         [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
     ),
@@ -44,8 +41,7 @@ keys = [
     ),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-    # Grow windows. If current window is on the edge of screen and direction
-    # will be to screen edge - window would shrink.
+    # Control window sizes
     Key([mod], "i", lazy.layout.grow(), desc="Grow focused window"),
     Key([mod], "o", lazy.layout.shrink(), desc="Shrink focused window"),
     Key([mod], "n", lazy.layout.reset(), desc="Reset all windows to default size"),
@@ -55,6 +51,7 @@ keys = [
         lazy.layout.maximize(),
         desc="Toggle focused window between it's maximum and minumum sizes",
     ),
+    # Flip master pane
     Key(
         [mod, "shift"],
         "space",
@@ -63,7 +60,7 @@ keys = [
     ),
     # Launch terminal
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    # Toggle between different layouts
+    # Toggle between layouts
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     # Basic functionality
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
@@ -105,8 +102,8 @@ snazzy = [
     ["#57c7ff", "#57c7ff"],  # blue       [6]
     ["#ff6ac1", "#ff6ac1"],  # magenta    [7]
     ["#9aedfe", "#9aedfe"],  # cyan       [8]
-    ["#f1f1f0", "#f1f1f0"],
-]  # white      [9]
+    ["#f1f1f0", "#f1f1f0"],  # white      [9]
+]
 
 # Horizon Dark
 colors = [
@@ -119,22 +116,11 @@ colors = [
     ["#26bbd9", "#3fc4de"],  # blue       [6]
     ["#ee64ac", "#f075b5"],  # magenta    [7]
     ["#59e1e3", "#6be4e6"],  # cyan       [8]
-    ["#d5d8da", "#d5d8da"],
-]  # white      [9]
+    ["#d5d8da", "#d5d8da"],  # white      [9]
+]
 
 
 # Groups/Workspaces
-# groups = [
-#    Group("1", label=""),
-#    Group("2", label="", matches=[Match(wm_class=["firefox"])]),
-#    Group("3", label="﬏", matches=[Match(wm_class=["jetbrains-studio", "Postman", "VSCodium"])]),
-#    Group("4", label="", matches=[Match(wm_class=["Pcmanfm"])]),
-#    Group("5", label="", matches=[Match(wm_class=["Spotify"])]),
-#    Group("6", label="ﭮ", matches=[Match(wm_class=["discord"])]),
-#    Group("7", label=""),
-#    Group("8", label="", matches=[Match(wm_class=["Nitrogen", "Lxappearance", "Xfce4-power-manager-settings"])]),
-# ]
-
 groups = [
     Group("1", label="一"),
     Group("2", label="二", matches=[Match(wm_class=["firefox"])]),
@@ -160,14 +146,14 @@ groups = [
 for i in groups:
     keys.extend(
         [
-            # mod1 + letter of group = switch to group
+            # mod + letter of group = switch to group
             Key(
                 [mod],
                 i.name,
                 lazy.group[i.name].toscreen(),
                 desc="Switch to group {}".format(i.name),
             ),
-            # mod1 + shift + letter of group = move focused window to group
+            # mod + shift + letter of group = move focused window to group
             Key(
                 [mod, "shift"],
                 i.name,
@@ -218,7 +204,7 @@ layouts = [
     layout.MonadTall(**layout_theme),
     layout.Max(**layout_theme),
     # layout.Bsp(),
-    # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    # layout.Columns(),
     # layout.Floating(),
     # layout.Matrix(),
     # layout.MonadThreeCol(),
@@ -443,12 +429,4 @@ auto_minimize = True
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "Qtile"
