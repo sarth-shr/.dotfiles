@@ -1,1 +1,4 @@
 qtile/__pycache__
+zsh/.histfiles
+zsh/.zcompdump
+zsh/.zsh_history
