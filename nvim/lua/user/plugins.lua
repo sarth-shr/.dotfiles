@@ -75,6 +75,9 @@ return packer.startup(function(use)
 		branch = "0.1.x",
 	})
 
+	-- Gitsigns for git integration
+	use("lewis6991/gitsigns.nvim")
+
 	-- Discord Rich Presence
 	use("andweeb/presence.nvim")
 
