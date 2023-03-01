@@ -36,6 +36,7 @@ return packer.startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("nvim-tree/nvim-web-devicons")
+	use("NvChad/nvim-colorizer.lua")
 
 	-- File explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -68,6 +69,7 @@ return packer.startup(function(use)
 	})
 	use("mrjones2014/nvim-ts-rainbow")
 	use("folke/trouble.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
 
 	-- Telescope
 	use({
@@ -78,12 +80,12 @@ return packer.startup(function(use)
 	-- Gitsigns for git integration
 	use("lewis6991/gitsigns.nvim")
 
-	-- Discord Rich Presence
-	use("andweeb/presence.nvim")
+	-- Terminal Integration
+	use("akinsho/toggleterm.nvim")
 
 	-- Impatient (improve startup time)
 	use("lewis6991/impatient.nvim")
 
-	-- Indet Line
-	use("lukas-reineke/indent-blankline.nvim")
+	-- Discord Rich Presence
+	use("andweeb/presence.nvim")
 end)
