@@ -11,15 +11,15 @@ autoload -U promptinit;
 promptinit
 
 # Set prompt
-PROMPT="%F{red}%B[%b%F{magenta}%n%f%B%F{green}@%b%F{cyan}%m%f%F{magenta}%B%F{red}]%b%f%B%F{yellow}╾╼%b%f%B%F{red}[%f%F{green}%~%F{red}]%b%f
-%F{green}%B "
+# PROMPT="%F{red}%B[%b%F{magenta}%n%f%B%F{green}@%b%F{cyan}%m%f%F{magenta}%B%F{red}]%b%f%B%F{yellow}╾╼%b%f%B%F{red}[%f%F{green}%~%F{red}]%b%f
+# %F{green}%B "
 
-# Render a new line before the prompt
-precmd() {
-    precmd() {
-        echo
-    }
-}
+# # Render a new line before the prompt
+# precmd() {
+#     precmd() {
+#         echo
+#     }
+# }
 
 # vi mode
 bindkey -v
@@ -55,6 +55,16 @@ alias mk2='rm -f blocks.h && sudo make clean install'
 alias rm='rm -i'
 alias mv='mv -i'
 alias df='df -h | awk "(NR==1) || /^\/dev/"'
+
+# Spaceship prompt configuration
+SPACESHIP_PROMPT_ORDER=(
+  venv
+  dir
+  git
+  line_sep
+  char
+)
+prompt spaceship
 
 # Source plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
