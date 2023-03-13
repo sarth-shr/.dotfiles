@@ -1,7 +1,12 @@
 #!/bin/sh
 
-nitrogen --restore &
-picom -b
+# Programs
 dunst &
-xfce4-power-manager &
+picom -b
 nm-applet &
+nitrogen --restore &
+xfce4-power-manager &
+
+# Trackpad configuration
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
