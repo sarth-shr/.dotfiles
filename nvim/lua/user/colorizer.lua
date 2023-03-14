@@ -6,4 +6,9 @@ if not status_ok then
 end
 
 -- Load colorizer
-colorizer.setup()
+colorizer.setup({
+	user_default_options = {
+		names = false,
+	},
+})
+
