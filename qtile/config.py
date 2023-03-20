@@ -127,7 +127,7 @@ groups = [
     Group(
         "3",
         label="三",
-        matches=[Match(wm_class=["jetbrains-studio", "Postman", "VSCodium"])],
+        matches=[Match(wm_class=["jetbrains-studio", "VSCodium", "code-oss", "jetbrains-idea-ce"])],
     ),
     Group("4", label="四", matches=[Match(wm_class=["Pcmanfm"])]),
     Group("5", label="五", matches=[Match(wm_class=["Spotify"])]),
