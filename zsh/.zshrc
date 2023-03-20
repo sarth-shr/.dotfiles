@@ -56,7 +56,7 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias df='df -h | awk "(NR==1) || /^\/dev/"'
 
-# Spaceship prompt configuration
+# Spaceship prompt order
 SPACESHIP_PROMPT_ORDER=(
   venv
   dir
@@ -64,6 +64,12 @@ SPACESHIP_PROMPT_ORDER=(
   line_sep
   char
 )
+
+# Spaceship venv configuration
+SPACESHIP_VENV_COLOR="green"
+
+# Spaceship prompt character configuration
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
 prompt spaceship
 
 # Source plugins
