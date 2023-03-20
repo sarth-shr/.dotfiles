@@ -6,10 +6,14 @@ export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 
 # Fixing paths
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc 
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java 
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java 
 
 # Neovim as manpager
 export MANPAGER='nvim +Man!'
