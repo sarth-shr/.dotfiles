@@ -87,8 +87,9 @@ return packer.startup(function(use)
 	use("mrjones2014/nvim-ts-rainbow")
 	use("folke/trouble.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
+	use("numToStr/Comment.nvim")
 
-	-- Telescope
+  -- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
