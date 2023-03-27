@@ -18,7 +18,8 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- File explorer
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeOpen<CR>", opts)
+keymap("n", "<leader>E", ":NvimTreeClose<CR>", opts)
 
 -- Navigate splits
 keymap("n", "<C-h>", "<C-w>h", opts)
