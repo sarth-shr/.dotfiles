@@ -1,5 +1,5 @@
 -- Protected call to prevent config crashing
-local colorscheme = "kanagawa"
+local colorscheme = "catppuccin"
 
 local status_ok, color_set = pcall(require, colorscheme)
 if not status_ok then
@@ -7,10 +7,17 @@ if not status_ok then
 	return
 end
 
--- Set colorscheme
+-- Settings
 color_set.setup({
-	dimInactive = true,
-	transparent = false,
+	flavour = "mocha",
+	transparent_background = false,
+	term_colors = true,
+	dim_inactive = {
+		enabled = true,
+		shade = "dark",
+		percentage = 0.75,
+	},
 })
 
+-- Load colorscheme
 color_set.load()

@@ -46,14 +46,12 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 
 	-- Colorschemes & theming
-	use("navarasu/onedark.nvim")
-	use("Mofiqul/dracula.nvim")
+	use("catppuccin/nvim")
 	use("rebelot/kanagawa.nvim")
-	use("marko-cerovac/material.nvim")
 	use("akinsho/bufferline.nvim")
 	use("nvim-lualine/lualine.nvim")
-	use("nvim-tree/nvim-web-devicons")
 	use("NvChad/nvim-colorizer.lua")
+	use("nvim-tree/nvim-web-devicons")
 
 	-- File explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -74,9 +72,9 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets")
 
 	-- LSP
+	use("neovim/nvim-lspconfig")
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
-	use("neovim/nvim-lspconfig")
 	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Treesitter & highlighting
@@ -84,12 +82,12 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-	use("mrjones2014/nvim-ts-rainbow")
 	use("folke/trouble.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
 	use("numToStr/Comment.nvim")
+	use("mrjones2014/nvim-ts-rainbow")
+	use("lukas-reineke/indent-blankline.nvim")
 
-  -- Telescope
+	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
