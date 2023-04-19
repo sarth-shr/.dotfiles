@@ -86,6 +86,7 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 	use("mrjones2014/nvim-ts-rainbow")
 	use("lukas-reineke/indent-blankline.nvim")
+	use("windwp/nvim-autopairs")
 
 	-- Telescope
 	use({
