@@ -123,7 +123,7 @@ colors = [
 # Groups/Workspaces
 groups = [
     Group("1", label="一"),
-    Group("2", label="二", matches=[Match(wm_class=["firefox"])]),
+    Group("2", label="二", matches=[Match(wm_class=["firefox", "Chromium"])]),
     Group(
         "3",
         label="三",

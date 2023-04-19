@@ -9,7 +9,7 @@ end
 
 -- Settings
 color_set.setup({
-	flavour = "mocha",
+	flavour = "macchiato",
 	transparent_background = false,
 	term_colors = true,
 	dim_inactive = {
