@@ -127,7 +127,16 @@ groups = [
     Group(
         "3",
         label="三",
-        matches=[Match(wm_class=["jetbrains-studio", "VSCodium", "code-oss", "jetbrains-idea-ce"])],
+        matches=[
+            Match(
+                wm_class=[
+                    "jetbrains-studio",
+                    "VSCodium",
+                    "code-oss",
+                    "jetbrains-idea-ce",
+                ]
+            )
+        ],
     ),
     Group("4", label="四", matches=[Match(wm_class=["Pcmanfm"])]),
     Group("5", label="五", matches=[Match(wm_class=["Spotify"])]),
@@ -381,7 +390,7 @@ screens = [
             opacity=0.80,
             background=colors[0],
             border_width=[6, 3, 6, 3],
-            border_color="#1c1e26",
+            border_color=colors[0][0],
         ),
     ),
 ]
