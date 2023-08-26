@@ -27,7 +27,7 @@ export LESSHISTFILE=-
 
 # Override VA-API & VDPAU drivers
 export LIBVA_DRIVER_NAME=iHD
-export VDPAU_DRIVER=nvidia
+export VDPAU_DRIVER=va_gl
 
 # JAVA GUI fix
 export _JAVA_AWT_WM_NONREPARENTING=1

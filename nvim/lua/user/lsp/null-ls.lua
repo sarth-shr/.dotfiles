@@ -7,7 +7,8 @@ end
 
 null_ls.setup({
 	sources = {
-		null_ls.builtins.formatting.black,
+		-- Code Formatting
+		null_ls.builtins.formatting.autopep8,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.djlint,

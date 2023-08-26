@@ -48,6 +48,7 @@ return packer.startup(function(use)
 	-- Colorschemes & theming
 	use("catppuccin/nvim")
 	use("rebelot/kanagawa.nvim")
+	use("Mofiqul/dracula.nvim")
 	use("akinsho/bufferline.nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("NvChad/nvim-colorizer.lua")

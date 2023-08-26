@@ -5,6 +5,8 @@ setopt globdots
 
 # Keyboard driven autocompletion
 zstyle ':completion:*' menu select
+# Ignore Case
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # Prompt
 autoload -U promptinit;
@@ -55,6 +57,7 @@ alias mk2='rm -f blocks.h && sudo make clean install'
 alias rm='rm -i'
 alias mv='mv -i'
 alias df='df -h | awk "(NR==1) || /^\/dev/"'
+alias zathura='zathura --fork'
 
 # Spaceship prompt order
 SPACESHIP_PROMPT_ORDER=(

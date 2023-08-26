@@ -8,7 +8,7 @@ end
 -- Load bufferline
 bufferline.setup {
   options = {
-    separator_style = "padded_slant",
+    separator_style = "slant",
     hover = {
       enabled = true,
       delay   = 200,

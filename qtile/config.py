@@ -17,7 +17,6 @@ def autostart():
 
 # End of startup hook
 
-
 mod = "mod4"
 terminal = "alacritty"
 
@@ -28,7 +27,8 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(),
+        desc="Move window focus to other window"),
     # Move windows
     Key(
         [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
@@ -44,7 +44,8 @@ keys = [
     # Control window sizes
     Key([mod], "i", lazy.layout.grow(), desc="Grow focused window"),
     Key([mod], "o", lazy.layout.shrink(), desc="Shrink focused window"),
-    Key([mod], "n", lazy.layout.reset(), desc="Reset all windows to default size"),
+    Key([mod], "n", lazy.layout.reset(),
+        desc="Reset all windows to default size"),
     Key(
         [mod],
         "m",
@@ -79,12 +80,13 @@ keys = [
         lazy.window.toggle_floating(),
         desc="Toggle focused window to floating",
     ),
-    Key([mod, "shift"], "s", lazy.spawn("flameshot gui"), desc="Run flameshot gui"),
+    Key([mod, "shift"], "s", lazy.spawn(
+        "flameshot gui"), desc="Run flameshot gui"),
     Key(
         [mod],
         "r",
         lazy.spawn(
-            "rofi -modi drun -show drun -display-drun 'RUN' -font 'JetBrainsMono Nerd Font 12' -show-icons"
+            "rofi -modi drun -show drun -display-drun 'RUN' -font 'JetBrainsMono NF 12' -show-icons"
         ),
         desc="Spawn rofi",
     ),
@@ -145,7 +147,14 @@ groups = [
         "7",
         label="七",
         matches=[
-            Match(wm_class=["Nitrogen", "Lxappearance", "Xfce4-power-manager-settings"])
+            Match(
+                wm_class=[
+                    "Nitrogen",
+                    "Lxappearance",
+                    "Xfce4-power-manager-settings",
+                    # "blueman-manager"
+                ]
+            )
         ],
     ),
     # Group("8", label="八"),
@@ -177,10 +186,32 @@ groups.append(
     ScratchPad(
         "scratchpad",
         [
-            DropDown("term", "alacritty", width=0.75, height=0.75, x=0.125, y=0.125),
+            DropDown(
+                "term", "alacritty",
+                width=0.75,
+                height=0.75,
+                x=0.125,
+                y=0.125
+            ),
             DropDown(
                 "pulsemixer",
                 "alacritty -e pulsemixer",
+                width=0.50,
+                height=0.50,
+                x=0.25,
+                y=0.25,
+            ),
+            DropDown(
+                "bluetooth manager",
+                "blueman-manager",
+                width=0.50,
+                height=0.50,
+                x=0.25,
+                y=0.25,
+            ),
+            DropDown(
+                "file manager",
+                "pcmanfm",
                 width=0.50,
                 height=0.50,
                 x=0.25,
@@ -193,9 +224,18 @@ groups.append(
 # Scratchpad keybinds
 keys.extend(
     [
-        Key([mod, "shift"], "return", lazy.group["scratchpad"].dropdown_toggle("term")),
+        Key(
+            [mod, "shift"], "return",
+            lazy.group["scratchpad"].dropdown_toggle("term")
+        ),
         Key(
             [mod, "shift"], "v", lazy.group["scratchpad"].dropdown_toggle("pulsemixer")
+        ),
+        Key(
+            [mod, "shift"], "b", lazy.group["scratchpad"].dropdown_toggle("bluetooth manager")
+        ),
+        Key(
+            [mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("file manager")
         ),
     ]
 )
@@ -230,7 +270,7 @@ layouts = [
 
 # Widgets
 widget_defaults = dict(
-    font="JetBrainsMono Nerd Font",
+    font="JetBrainsMono NF",
     fontsize=18,
     padding=5,
 )
@@ -252,7 +292,7 @@ screens = [
                 ),
                 widget.TextBox(
                     padding=0,
-                    text="",
+                    text="󰇙",
                     fontsize=37,
                     foreground=colors[0],
                     background=colors[6],
@@ -374,7 +414,7 @@ screens = [
                     background=colors[5],
                 ),
                 widget.Clock(
-                    format=" : %H:%M",
+                    format="󰃰 : %H:%M",
                     foreground=colors[0],
                     background=colors[6],
                 ),
