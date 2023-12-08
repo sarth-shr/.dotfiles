@@ -95,32 +95,31 @@ keys = [
 # Colors
 # Snazzy
 snazzy = [
-    ["#282a36", "#282a36"],  # bg         [0]
-    ["#eff0eb", "#eff0eb"],  # fg         [1]
-    ["#686868", "#686868"],  # black      [2]
-    ["#ff5c57", "#ff5c57"],  # red        [3]
-    ["#5af78e", "#5af78e"],  # green      [4]
-    ["#f3f99d", "#f3f99d"],  # yellow     [5]
-    ["#57c7ff", "#57c7ff"],  # blue       [6]
-    ["#ff6ac1", "#ff6ac1"],  # magenta    [7]
-    ["#9aedfe", "#9aedfe"],  # cyan       [8]
-    ["#f1f1f0", "#f1f1f0"],  # white      [9]
+    ["#282a36"],  # bg         [0]
+    ["#eff0eb"],  # fg         [1]
+    ["#686868"],  # black      [2]
+    ["#ff5c57"],  # red        [3]
+    ["#5af78e"],  # green      [4]
+    ["#f3f99d"],  # yellow     [5]
+    ["#57c7ff"],  # blue       [6]
+    ["#ff6ac1"],  # magenta    [7]
+    ["#9aedfe"],  # cyan       [8]
+    ["#f1f1f0"],  # white      [9]
 ]
 
 # Horizon Dark
 colors = [
-    ["#1c1e26", "#1c1e26"],  # bg         [0]
-    ["#e0e0e0", "#e0e0e0"],  # fg         [1]
-    ["#5b5858", "#5b5858"],  # black      [2]
-    ["#e95678", "#ec6a88"],  # red        [3]
-    ["#29d398", "#3fdaa4"],  # green      [4]
-    ["#fab795", "#fbc3a7"],  # yellow     [5]
-    ["#26bbd9", "#3fc4de"],  # blue       [6]
-    ["#ee64ac", "#f075b5"],  # magenta    [7]
-    ["#59e1e3", "#6be4e6"],  # cyan       [8]
-    ["#d5d8da", "#d5d8da"],  # white      [9]
+    ["#1c1e26"],  # bg         [0]
+    ["#e0e0e0"],  # fg         [1]
+    ["#5b5858"],  # black      [2]
+    ["#e95678"],  # red        [3]
+    ["#29d398"],  # green      [4]
+    ["#fab795"],  # yellow     [5]
+    ["#26bbd9"],  # blue       [6]
+    ["#ee64ac"],  # magenta    [7]
+    ["#59e1e3"],  # cyan       [8]
+    ["#d5d8da"],  # white      [9]
 ]
-
 
 # Groups/Workspaces
 groups = [
@@ -152,6 +151,7 @@ groups = [
                     "Nitrogen",
                     "Lxappearance",
                     "Xfce4-power-manager-settings",
+                    "Pinta",
                     # "blueman-manager"
                 ]
             )
