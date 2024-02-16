@@ -9,7 +9,7 @@ export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 # export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode # May Break
-export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+# export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority # Will Break
 export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history 
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc 
@@ -26,11 +26,14 @@ export HISTFILE=~/.config/zsh/.histfile
 export LESSHISTFILE=-
 
 # Override VA-API & VDPAU drivers
-export LIBVA_DRIVER_NAME=iHD
-export VDPAU_DRIVER=va_gl
+export LIBVA_DRIVER_NAME=iHD # iHD or nvidia
+export VDPAU_DRIVER=va_gl # va_gl or nvidia
 
 # JAVA GUI fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Neovim as editor
 export EDITOR=nvim
+
+# QT5CT
+export QT_QPA_PLATFORMTHEME=qt5ct

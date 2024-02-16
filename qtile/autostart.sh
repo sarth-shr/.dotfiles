@@ -6,6 +6,7 @@ picom -b
 nm-applet &
 nitrogen --restore &
 xfce4-power-manager &
+optimus-manager-qt &
 
 # Trackpad configuration
 xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1

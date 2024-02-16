@@ -29,6 +29,7 @@ keys = [
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(),
         desc="Move window focus to other window"),
+    
     # Move windows
     Key(
         [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
@@ -41,6 +42,7 @@ keys = [
     ),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    
     # Control window sizes
     Key([mod], "i", lazy.layout.grow(), desc="Grow focused window"),
     Key([mod], "o", lazy.layout.shrink(), desc="Shrink focused window"),
@@ -52,6 +54,7 @@ keys = [
         lazy.layout.maximize(),
         desc="Toggle focused window between it's maximum and minumum sizes",
     ),
+   
     # Flip master pane
     Key(
         [mod, "shift"],
@@ -59,14 +62,18 @@ keys = [
         lazy.layout.flip(),
         desc="Flip master pane between left and right",
     ),
+   
     # Launch terminal
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+   
     # Toggle between layouts
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+   
     # Basic functionality
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+   
     # Custom keybinds
     Key(
         [mod],
@@ -89,6 +96,12 @@ keys = [
             "rofi -modi drun -show drun -display-drun 'RUN' -font 'JetBrainsMono NF 12' -show-icons"
         ),
         desc="Spawn rofi",
+    ),
+    Key(
+        [mod],
+        "c",
+        lazy.spawn("betterlockscreen -l dimblur"),
+        desc="Lock the screen",
     ),
 ]
 
@@ -157,8 +170,8 @@ groups = [
             )
         ],
     ),
-    # Group("8", label="八"),
-    # Group("9", label="九", matches=[Match(wm_class=["Nitrogen", "Lxappearance", "Xfce4-power-manager-settings"])]),
+    Group("8", label="八", matches=[Match(wm_class=["VirtualBox Machine", "VirtualBox Manager"])]),
+    Group("9", label="九", matches=[Match(wm_class=["Nitrogen", "Lxappearance", "Xfce4-power-manager-settings"])]),
 ]
 
 for i in groups:

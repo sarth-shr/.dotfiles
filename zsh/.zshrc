@@ -58,6 +58,7 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias df='df -h | awk "(NR==1) || /^\/dev/"'
 alias zathura='zathura --fork'
+alias startx='exec sh -c "startx ; sudo prime-switch"'
 
 # Spaceship prompt order
 SPACESHIP_PROMPT_ORDER=(
